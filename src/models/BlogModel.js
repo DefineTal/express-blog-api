@@ -11,6 +11,7 @@
 //     - timestamp
 
 const mongoose = require("mongoose");
+const { commentSchema } = require("./CommentModel");
 
 
 const blogSchema = new mongoose.Schema({
@@ -46,7 +47,17 @@ const blogSchema = new mongoose.Schema({
     editHistory: {
         type: [{user: String, timestamp: Date}],
         required: false
+    },
+    // This is what we would write if we do NOT use subdocuments:
+    // commentsAsObj: {
+    //     type: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
+    //     content: {type: String}
+    // },
+    comments: {
+        type: [commentSchema],
+        required: false
     }
+
 },
 
 {

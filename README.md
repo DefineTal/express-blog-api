@@ -27,6 +27,7 @@
 Join table in SQl, but subdocument in Mongoose that lives in Blog posts
 - user id
 - comment content
+- like
 
 ### Action log (TBD)
 
