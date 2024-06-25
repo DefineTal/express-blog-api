@@ -15,11 +15,11 @@ const userSchema = mongoose.Schema({
         required: false,
         unique: false
     },
-    comments: {
-        // These are NOT the same comments as what the blog containts
-        types: [commentSchema],
-        required: false
-    }
+    // comments: {
+    //     // These are NOT the same comments as what the blog containts
+    //     types: [commentSchema],
+    //     required: false
+    // }
 });
 
 const UserModel = mongoose.model("User", userSchema);
