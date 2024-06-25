@@ -17,7 +17,8 @@ const { commentSchema } = require("./CommentModel");
 const blogSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     content: {
         type: String,
@@ -67,6 +68,6 @@ const blogSchema = new mongoose.Schema({
 
 const BlogModel = mongoose.model("Blog", blogSchema);
 
-module.export = {
+module.exports = {
     BlogModel
 }
