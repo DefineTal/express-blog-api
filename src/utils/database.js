@@ -1,11 +1,13 @@
+const { configDotenv } = require("dotenv");
 const mongoose = require("mongoose");
-
+const dotenv = require("dotenv");
+require("dotenv").config();
 
 async function databaseConnect(){
 
     let databaseURL = process.env.DATABASE_URL 
     || 
-    "mongodb+srv://definesmug:RVjPVKyKZw$iV9x@clusteracademy.9oamikv.mongodb.net/?retryWrites=true&w=majority&appName=ClusterAcademy";
+    "mongodb+srv://taliesinstudy:STM9CN8IpEfDMj3B@somecoolclustername.na08wmo.mongodb.net/?retryWrites=true&w=majority&appName=SomeCoolClusterName";
 
     await mongoose.connect(databaseURL);
     console.log("Database connecting completed!");
